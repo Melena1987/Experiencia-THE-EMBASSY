@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { I18nProvider } from './context/I18nContext';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -10,6 +11,7 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    {/* FIX: Explicitly passing children as a prop to satisfy the component's type signature. */}
+    <I18nProvider children={<App />} />
   </React.StrictMode>
 );

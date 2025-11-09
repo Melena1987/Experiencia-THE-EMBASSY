@@ -3,7 +3,7 @@ import { useI18n } from '../context/I18nContext';
 
 const UKFlag: React.FC<{className?: string}> = ({ className }) => (<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="a"><path d="M30 15h30v15zv15h-30z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6"/><path d="M0 0l60 30m0-30L0 30" clipPath="url(#a)" stroke="#C8102E" strokeWidth="4"/><path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6"/></svg>);
 const SAFlag: React.FC<{className?: string}> = ({ className }) => (<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" fill="#006c35"/><text fill="#fff" fontFamily="Tornado" fontSize="70" textAnchor="middle" x="300" y="220">لَا إِلٰهَ إِلَّا الله مُحَمَّدٌ رَسُولُ الله</text><path fill="#fff" d="m300 325-150-25 10 10 140 15 140-15 10-10-150 25-22.5-35 22.5-12.5v60z"/></svg>);
-
+const CNFlag: React.FC<{className?: string}> = ({ className }) => (<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><path fill="#de2910" d="M0 0h60v40H0z"/><path fill="#ffde00" d="m10 8 1.854 5.706h6.003l-4.856 3.527 1.854 5.706-4.855-3.527-4.855 3.527 1.854-5.706-4.856-3.527h6.003L10 8zm10 2 1.236.901-1.382 2.756.146 1.226 2.072.15 1.236.902.146 1.226-1.382 2.755L22 18l-.146-1.226L20 20l.146-1.226.146-1.226zm5-3 .927 1.154-1.942 1.942.345.97.927-1.154.345.97 1.637-.23L27 12l-1.637.23-1.637-.23zm0 8 .927-1.154 1.637.23.345-.97.927 1.154.345-.97-1.942-1.942L27 12l1.637-.23 1.637.23zm-5 4 .618 1.107-.97.345L20 20l.97-.345.97-.345.618 1.107L22 18l-.97.345-.97.345z"/></svg>);
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,6 +39,9 @@ const Header: React.FC = () => {
             </button>
             <button onClick={() => setLanguage('ar')} aria-label="Switch to Arabic">
                 <SAFlag className={`w-6 h-auto rounded-sm transition-opacity duration-300 ${language !== 'ar' ? 'opacity-50 hover:opacity-100' : 'opacity-100'}`}/>
+            </button>
+            <button onClick={() => setLanguage('zh')} aria-label="Switch to Chinese">
+                <CNFlag className={`w-6 h-auto rounded-sm transition-opacity duration-300 ${language !== 'zh' ? 'opacity-50 hover:opacity-100' : 'opacity-100'}`}/>
             </button>
         </div>
 

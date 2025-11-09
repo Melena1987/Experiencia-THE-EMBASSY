@@ -14,6 +14,14 @@ import arHospitality from './locales/ar/hospitality';
 import arContact from './locales/ar/contact';
 import arFooter from './locales/ar/footer';
 
+import zhHeader from './locales/zh/header';
+import zhHero from './locales/zh/hero';
+import zhIntroduction from './locales/zh/introduction';
+import zhPillars from './locales/zh/pillars';
+import zhHospitality from './locales/zh/hospitality';
+import zhContact from './locales/zh/contact';
+import zhFooter from './locales/zh/footer';
+
 export const translations = {
   en: {
     header: enHeader,
@@ -32,5 +40,14 @@ export const translations = {
     hospitality: arHospitality,
     contact: arContact,
     footer: arFooter,
+  },
+  zh: {
+    header: zhHeader,
+    hero: zhHero,
+    introduction: zhIntroduction,
+    pillars: zhPillars,
+    hospitality: zhHospitality,
+    contact: zhContact,
+    footer: zhFooter,
   },
 };
